@@ -245,8 +245,8 @@ class provider extends \core_ai\provider {
                 * Filter models based on the action name.
                 */
                 if ($actionname === 'generate_text' || $actionname === 'summarise_text') {
-                    // Regex to filter model "gemini-version-tipo".
-                    $pattern = '/^models\/gemini-\d+(\.\d+)?(-\d+)?-(pro|flash|flash-lite)(-8b)?$/';
+                    // Regex to filter Gemini and Gemma text models.
+                    $pattern = '/^models\/(gemini-\d+(\.\d+)?(-\d+)?-(pro|flash|flash-lite)(-8b)?|gemma-\d+(-\d+)?-\d+[a-z](-[a-z0-9-]+)?)$/';
                 } else if ($actionname === 'generate_image') {
                     // Regex to filter imagen models, only stable versions.
                     // Struttura: models/imagen-x.y-generate-<numero>.
